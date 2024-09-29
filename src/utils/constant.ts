@@ -1,3 +1,3 @@
 export const Constant = {
-    title: 'Basic'
+    title: 'Basssic'
 }
