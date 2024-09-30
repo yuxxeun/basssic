@@ -4,6 +4,7 @@ import '@fontsource-variable/newsreader';
 import { Constant } from '../utils/constant';
 import Footer from '../components/common/Footer.tsx';
 import SmoothScroll from '../components/core/SmoothScroll.tsx';
+import Meta from '../components/core/Meta.astro';
 interface Props {
 	title: string;
 }
@@ -19,6 +20,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<Meta/>
 		<title>{title}</title>
 	</head>
 	<body class="mt-24 leading-normal tracking-normal font-delight text-[16px] text-[#e1e1e1]">
