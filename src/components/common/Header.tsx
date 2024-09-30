@@ -56,7 +56,7 @@ const Header = () => {
                         Today our internet is noisy, full of internet celebrities, infopreneurs, and less-social.
                         We live with the world at our fingertips, we cling to a pocket-sized portal that promises dreams of escape, but leaves us feeling empty.
                         <br /><br />
-                        Reach me at <a href="https://twitter.com/yuxxeun" className="underlines">@yuxxeun</a>  on the world wide web.
+                        Reach me at <a href="https://twitter.com/yuxxeun" target="_blank" className="underlines">@yuxxeun</a>  on the world wide web.
                     </p>
                 </div>
             </div>
