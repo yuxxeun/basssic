@@ -39,7 +39,7 @@ const Header = () => {
                         Typography, motion design, copywriting, performance—the web is an endless medium of opportunity and creativity of which I’ve only scratched the surface.
                         <br />
                         <br />
-                        Enjoying deep, dark, boring dance music: songs that set the pace in the first ten seconds and maintain it for the next ten minutes. <span className="underlines">Deep</span> is a curation of my favorites. Soothed by the inherent energy of drum and bass—<span className="underlines">Drum</span> has my favorites.
+                        Enjoying deep, dark of rock and orchestral music: songs that captivate you within the first ten seconds and maintain that energy for the next ten minutes. <span className="underlines">Deep</span> is a curation of my favorites. Soothed by the inherent energy of drum and bass—<span className="underlines">Drum</span> has my favorites.
                     </p>
                 </div>
 
