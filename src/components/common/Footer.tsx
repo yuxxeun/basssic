@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { IconArrowTriangleDown, IconArrowTriangleUp } from "justd-icons";
+import { IconArrowTriangleDown, IconArrowTriangleUp, IconArrowTriangleUpFill } from "justd-icons";
 import ScreenDimensions from '../core/ScreenDimensions';
 import Container from './Container';
 
@@ -34,7 +34,7 @@ const Footer = () => {
 
     return (
         <>
-                <Container className="lg:px-8 px-7 text-[#666666] flex items-center justify-between">
+                <Container className="lg:px-8 px-6 text-[#666666] flex items-center justify-between">
                     <div>
                         <p>
                             {randomPoem}
@@ -43,7 +43,7 @@ const Footer = () => {
                     <div className="flex items-center gap-2">
                         <ScreenDimensions/>
                         {isVisible ? (
-                                <IconArrowTriangleUp className="w-4 cursor-pointer" 
+                                <IconArrowTriangleUpFill className="w-4 cursor-pointer" 
                                 onClick={handleIconClick} />
                             ) : (
                                 <IconArrowTriangleDown 

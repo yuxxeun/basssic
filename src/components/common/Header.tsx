@@ -1,4 +1,4 @@
-import { IconBrandLayers } from "justd-icons";
+import { IconBrandLayers, IconBullet, IconCainLink2, IconChainLink, IconCirclePlaceholderDashed, IconLink, IconPlus, IconVerified } from "justd-icons";
 import Container from "./Container";
 import { Constant } from "../../utils/constant";
 
@@ -23,9 +23,13 @@ const Header = () => {
                 </p>
 
                 <div className="my-16">
-                    <h1 className="font-bold text-lg font-sans">
-                        Now
-                    </h1>
+                    <div className="flex gap-3 items-center">
+                            <h1 className=" font-bold text-lg">
+                                Now
+                            </h1>
+                            <div className="underlines h-0.5 w-full" />
+                            <IconBullet className="w-5"/>
+                    </div>
                     <p className="mt-5">
                         Developing skill through doing, guiltlessly exploring passion and interests, imbuing quality. 
                         Mindful that  <span className="font-newsreaderItalic font-semibold">everything around me is someone’s life work</span>.
@@ -40,11 +44,19 @@ const Header = () => {
                 </div>
 
                 <div>
-                    <h1 className="font-bold text-lg font-sans">
-                        Connect
-                    </h1>
+                    <div className="flex gap-3 items-center">
+                        <h1 className=" font-bold text-lg">
+                            Connect
+                        </h1>
+                        <div className="underlines h-0.5 w-full" />
+                        <IconVerified className="w-5.5"/>
+                    </div>
+                    
                     <p className="mt-5">
-                        Reach me at <a href="https://twitter.com/yuxxeun" className="underlines">@yuxxeun</a>  on internet.
+                        Today our internet is noisy, full of internet celebrities, infopreneurs, and less-social.
+                        We live with the world at our fingertips, we cling to a pocket-sized portal that promises dreams of escape, but leaves us feeling empty.
+                        <br /><br />
+                        Reach me at <a href="https://twitter.com/yuxxeun" className="underlines">@yuxxeun</a>  on the world wide web.
                     </p>
                 </div>
             </div>
