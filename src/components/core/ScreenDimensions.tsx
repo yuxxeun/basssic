@@ -7,21 +7,15 @@ export default function ScreenDimensions() {
   });
 
   useEffect(() => {
-    // Hanya menjalankan logika ini di sisi klien
     const handleResize = () => {
       setDimensions({
         width: window.innerWidth,
         height: window.innerHeight,
       });
     };
-
-    // Inisialisasi ukuran saat pertama kali di-render
-    handleResize();
-
-    // Menambahkan event listener untuk resize
-    window.addEventListener('resize', handleResize);
     
-    // Cleanup event listener saat komponen di-unmount
+    handleResize();
+    window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
