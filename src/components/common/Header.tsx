@@ -1,4 +1,4 @@
-import { IconBrandLayers, IconBullet, IconCainLink2, IconChainLink, IconCirclePlaceholderDashed, IconLink, IconPlus, IconVerified } from "justd-icons";
+import { IconBrandJustd, IconBrandLayers, IconBullet, IconCainLink2, IconChainLink, IconCirclePlaceholderDashed, IconLink, IconPlus, IconVerified } from "justd-icons";
 import Container from "./Container";
 import { Constant } from "../../utils/constant";
 
@@ -7,11 +7,11 @@ const Header = () => {
        <>
 	   	<Container>
             <div className="animate-fade-right flex items-center gap-3">
-                <div className="border border-[#2e2e2e] rounded-full">
-                    <IconBrandLayers className="m-2"/> 
+                <div className="border border-[#2e2e2e] rounded-lg">
+                    <IconBrandJustd className="m-2"/> 
                 </div>
                 <div>
-                    <h1 className="text-2xl font-bold">
+                    <h1 className="text-2xl tracking-wide font-semibold">
                         {Constant.title}
                     </h1>
                 </div>
