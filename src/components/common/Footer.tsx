@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { IconArrowTriangleDown, IconArrowTriangleUp } from "justd-icons";
 import ScreenDimensions from '../core/ScreenDimensions';
+import Container from './Container';
 
 const poem = [
     'Shine, constantly and steadily.',
@@ -32,8 +33,8 @@ const Footer = () => {
     };
 
     return (
-            <div className="font-delight border-t border-[#2e2e2e] py-3 mt-14">
-                <div className="text-[16px] text-[#666666] max-w-2xl mx-auto lg:px-12 px-6 flex items-center justify-between">
+        <>
+                <Container className="lg:px-8 px-7 text-[#666666] flex items-center justify-between">
                     <div>
                         <p>
                             {randomPoem}
@@ -52,20 +53,24 @@ const Footer = () => {
                             )}
                        
                     </div>
-                </div>
+                </Container>
                 {isVisible && (
-                    <div className='border-t border-[#2e2e2e] py-16 mt-3 '>                   
-                        <p className={`mx-auto lg:px-12 px-6 max-w-2xl ${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'}`}>
-                        I’m reciting that <span className='font-newsreaderItalic font-semibold'>quality affects all aspects of my pursuits</span>. 
-                        <br />
-                        I want to <span className='font-newsreaderItalic font-semibold'>imbue quality</span> in everything I do. This skill develops while <span className='font-newsreaderItalic font-semibold'>doing</span>. Not thinking, not imagining, <span className='font-newsreaderItalic font-semibold'>doing</span>. It is learned through learning and experimenting and consistency and pacing.
+                    <div className='border-t border-[#2e2e2e] py-16 mt-3 '> 
+                    <Container className='lg:px-8 px-7'>          
+                            <p className={`${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'}`}>
+                            I’m reciting that <span className='font-newsreaderItalic font-semibold'>quality affects all aspects of my pursuits</span>. 
+                            <br />
+                            I want to <span className='font-newsreaderItalic font-semibold'>imbue quality</span> in everything I do. This skill develops while <span className='font-newsreaderItalic font-semibold'>doing</span>. Not thinking, not imagining, <span className='font-newsreaderItalic font-semibold'>doing</span>. It is learned through learning and experimenting and consistency and pacing.
 
-                        <br /><br />
-                        Above these all, I love You.
-                        </p>
+                            <br /><br />
+                            Above these all, I love You.
+                            </p>
+                        
+                    </Container>
                     </div>
+                    
                 )}
-            </div>
+            </>
     );
 };
 

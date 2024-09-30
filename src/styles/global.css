@@ -30,7 +30,7 @@
     @font-face {
         font-family: 'Neue-Montreal-Regular-400';
         src: url('/fonts/Neue/Neue-Montreal-Regular-400.woff2') format('woff2');
-        font-weight: 900;
+        font-weight: 400;
         font-display: swap;
         font-style: normal;
     }

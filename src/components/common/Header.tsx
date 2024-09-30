@@ -11,7 +11,7 @@ const Header = () => {
                     <IconBrandLayers className="m-2"/> 
                 </div>
                 <div>
-                    <h1 className="text-2xl font-bold font-newsreader">
+                    <h1 className="text-2xl font-bold">
                         {Constant.title}
                     </h1>
                 </div>

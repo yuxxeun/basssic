@@ -21,10 +21,12 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="mt-24 leading-normal tracking-normal font-delight text-[16px]">
+	<body class="mt-24 leading-normal tracking-normal font-delight text-[16px] text-[#e1e1e1]">
 		<SmoothScroll client:load>
 			<slot/>
-			<Footer client:load/>
+			<div class="font-delight border-t border-[#2e2e2e] py-3 mt-14">
+				<Footer client:load/>
+			</div>
 		</SmoothScroll>
 	</body>
 </html>
