@@ -1,3 +1,4 @@
 export const Constant = {
-    title: 'Basssic'
+    title: 'Basssic',
+    description: 'Crafting interfaces.'
 }

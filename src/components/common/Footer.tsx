@@ -1,62 +1,67 @@
 import { useState, useEffect } from 'react';
-import { IconBrandAstro, IconBrandReactjs, IconBrandVercel, IconShieldKeyhole } from "justd-icons";
+import { IconArrowTriangleDown, IconArrowTriangleUp, IconBrandAstro, IconBrandReactjs, IconBrandVercel, IconShieldKeyhole, IconVerified } from "justd-icons";
 import Container from "./Container";
+import ScreenDimensions from '../core/ScreenDimensions';
 
 const poem = [
     'Shine, constantly and steadily.',
     'Sit with your ambient ambition.',
     'Find flow.',
-    'Embrace the journey, not the destination.',
 ];
 
 const Footer = () => {
-    const [isVisible, setIsVisible] = useState(false); // State untuk kontrol tampilan teks
-    const [isFadingOut, setIsFadingOut] = useState(false); // State untuk kontrol animasi
-    const [randomPoem, setRandomPoem] = useState(''); // State untuk teks acak
-    const currentYear = new Date().getFullYear();
+    const [isVisible, setIsVisible] = useState(false); 
+    const [isFadingOut, setIsFadingOut] = useState(false); 
+    const [randomPoem, setRandomPoem] = useState('');
 
-    // Mengambil teks acak saat komponen dimuat
+  
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * poem.length);
         setRandomPoem(poem[randomIndex]);
-    }, []); // Kosong untuk hanya dijalankan sekali saat komponen dimuat
+    }, []); 
 
     const handleIconClick = () => {
         if (isVisible) {
-            setIsFadingOut(true); // Set fading out sebelum menyembunyikan teks
+            setIsFadingOut(true); 
             setTimeout(() => {
                 setIsVisible(false);
-                setIsFadingOut(false); // Reset fading out
-            }, 300); // Waktu yang sama dengan durasi animasi
+                setIsFadingOut(false); 
+            }, 300); 
         } else {
-            setIsVisible(true); // Tampilkan teks
+            setIsVisible(true);
         }
     };
 
     return (
-        <Container>
-            <div className="text-md border-t border-gray-500 py-5 mt-14">
-                <div className="flex items-center justify-between">
+            <div className="font-delight border-t border-[#2e2e2e] py-3 mt-14">
+                <div className="text-[16px] text-[#666666] max-w-2xl lg:px-0 mx-auto px-5 flex items-center justify-between">
                     <div>
-                        <p className="font-sans">
+                        <p className="">
                             {randomPoem}
                         </p>
                     </div>
                     <div className="flex items-center gap-2">
-                        {currentYear}
-                        <IconBrandReactjs 
-                            className="animate-spin cursor-pointer" 
-                            onClick={handleIconClick}
-                        />
+                        <ScreenDimensions/>
+                        {isVisible ? (
+                                <IconArrowTriangleUp className="w-4 cursor-pointer" 
+                                onClick={handleIconClick} />
+                            ) : (
+                                <IconArrowTriangleDown 
+                                className="w-4 cursor-pointer" 
+                                onClick={handleIconClick}
+                            />
+                            )}
+                       
                     </div>
                 </div>
                 {isVisible && (
-                    <p className={`border-t border-gray-500 py-10 mt-5  ${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'}`}>
-                       I’m reciting that <span className='font-newsreader italic font-extrabold'>quality affects all aspects of my pursuits</span>. I want to <span className='font-newsreader italic font-extrabold'>imbue quality</span> in everything I do. This skill develops while <span className='font-newsreader italic font-extrabold'>doing</span>. Not thinking, not imagining, <span className='font-newsreader italic font-extrabold'>doing</span>. It is learned through learning and experimenting and consistency and pacing.
-                    </p>
+                    <div className='border-t lg:px-0 px-5 border-[#2e2e2e] py-16 mt-3 '>                   
+                        <p className={`mx-auto max-w-2xl ${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'}`}>
+                        I’m reciting that <span className='font-newsreaderItalic font-semibold'>quality affects all aspects of my pursuits</span>. I want to <span className='font-newsreaderItalic font-semibold'>imbue quality</span> in everything I do. This skill develops while <span className='font-newsreaderItalic font-semibold'>doing</span>. Not thinking, not imagining, <span className='font-newsreaderItalic font-semibold'>doing</span>. It is learned through learning and experimenting and consistency and pacing.
+                        </p>
+                    </div>
                 )}
             </div>
-        </Container>
     );
 };
 

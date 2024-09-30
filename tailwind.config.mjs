@@ -6,7 +6,10 @@ export default {
   theme: {
     fontFamily: {
       sans: ['Inter', ...defaultTheme.fontFamily.sans],
-      newsreader: ['Newsreader'],
+      newsreader: ['Newsreader-VariableFont', 'sans-serif'],
+      newsreaderItalic: ['Newsreader-Italic-VariableFont'],
+      montreal: ['Neue-Montreal-Medium', 'sans-serif'],
+      delight: ['Neue-Montreal-Regular-400', 'sans-serif'],
     },
     extend: { 
       animation: {

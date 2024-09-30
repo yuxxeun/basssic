@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    @font-face {
+        font-family: 'Newsreader-VariableFont';
+        src: url('/fonts/Newsreader/Newsreader-VariableFont.woff2') format('woff2');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Newsreader-Italic-VariableFont';
+        src: url('/fonts/Newsreader/Newsreader-Italic-VariableFont.woff2') format('woff2');
+        font-weight: 400;
+        font-display: swap;
+        font-style: italic;
+    }
+    
+    @font-face {
+        font-family: 'Neue-Montreal-Medium';
+        src: url('/fonts/Neue/Neue-Montreal-Medium.woff2') format('woff2');
+        font-weight: 900;
+        font-display: swap;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Neue-Montreal-Regular-400';
+        src: url('/fonts/Neue/Neue-Montreal-Regular-400.woff2') format('woff2');
+        font-weight: 900;
+        font-display: swap;
+        font-style: normal;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 1px; 
 }
@@ -11,19 +45,19 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #4A4A4A; 
+    background-color: #2c2c2c; 
     border-radius: 10px; 
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #7A7A7A; 
+    background-color: #2c2c2c; 
 }
 
 
 * {
     scrollbar-width: thin; 
-    scrollbar-color: #4A4A4A transparent; 
+    scrollbar-color: #2c2c2c transparent; 
 }
 
 *::-moz-scrollbar {
@@ -31,7 +65,7 @@
 }
 
 *::-moz-scrollbar-thumb {
-    background-color: #4A4A4A; 
+    background-color: #2c2c2c; 
     border-radius: 10px; 
 }
 
@@ -39,12 +73,17 @@
     background: transparent; 
 }
 
+::selection {
+    background-color: #2c2c2c;
+}
+
 
 body {
+    cursor: crosshair;
     scrollbar-width: thin;
-    scrollbar-color: #4A4A4A transparent;
-    color: rgb(185, 185, 185);
-    background-color: #09090b;
+    scrollbar-color: #2c2c2c transparent;
+    color: #b9b9b9;
+    background-color: #1a1a1a;
 }
 
 .underlines {

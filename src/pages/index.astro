@@ -1,14 +1,14 @@
 ---
 import {Constant} from '../utils/constant';
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
+import Header from '../components/common/Header.tsx';
 import Container from '../components/common/Container';
+import LoadingScreen from '../components/core/loader';
 ---
 
 <Layout title={Constant.title}>
+	<LoadingScreen client:load />
 	<Container>
 		<Header client:load/>
-        <Footer client:load/>
 	</Container>
 </Layout>

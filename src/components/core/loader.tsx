@@ -1,41 +1,44 @@
-'use client'
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-const Loader = () => {
-    const [progress, setProgress] = useState(0);
-    const [loading, setLoading] = useState(true);
+const LoadingScreen: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setProgress(prev => {
-                if (prev >= 100) {
-                    clearInterval(interval);
-                    setLoading(false);
-                    return 100;
-                }
-                return prev + 1;
-            });
-        }, 50);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsExiting(true);
+      setTimeout(() => {
+        setIsLoaded(true);
+      }, 1000);
+    }, 2000);
 
-        return () => clearInterval(interval);
-    }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-    return (
-        <div
-            className={`fixed inset-0 flex items-center justify-center transition-transform duration-500 ${!loading && 'transform -translate-y-full'}`}
-        >
-            {loading ? (
-                <div className="text-white text-center">
-                    <div className="text-2xl mb-4">Loading...</div>
-                    <div className="text-6xl font-bold">{progress}%</div>
-                </div>
-            ) : (
-                <div className="text-white text-center">
-                    <div className="text-2xl mb-4">Loaded!</div>
-                </div>
-            )}
+  useEffect(() => {
+    if (isLoaded) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  }, [isLoaded]);
+
+  return (
+    !isLoaded && (
+      <div
+        id="loading-screen"
+        className={`fixed left-0 top-0 z-50 flex min-h-screen w-full items-center justify-center border-b-2 border-[#2e2e2e] bg-[#1a1a1a] transition-transform duration-1000 ${
+          isExiting ? "-translate-y-full" : "translate-y-0"
+        }`}
+      >
+        <div>
+            <p className="font-newsreaderItalic font-semibold text-xl">
+                Sit with your ambient ambition.
+            </p>
         </div>
-    );
+      </div>
+    )
+  );
 };
 
-export default Loader;
+export default LoadingScreen;
