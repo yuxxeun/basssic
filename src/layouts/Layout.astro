@@ -1,25 +1,15 @@
 ---
 import '../styles/global.css';
 import '@fontsource-variable/newsreader';
-import { Constant } from '../utils/constant';
 import Footer from '../components/common/Footer.tsx';
 import SmoothScroll from '../components/core/SmoothScroll.tsx';
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+import Meta from '../components/core/Meta.astro';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={Constant.description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<Meta/>
 	</head>
 	<body class="mt-24 leading-normal tracking-normal font-delight text-[16px] text-[#e1e1e1]">
 		<SmoothScroll client:load>
