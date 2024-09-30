@@ -27,7 +27,7 @@ const Header = () => {
                             <h1 className=" font-bold text-lg">
                                 Now
                             </h1>
-                            <div className="underlines mt-1 h-0.5 w-full" />
+                            <div className="underlines mt-0.5 h-0.5 w-full" />
                             <IconBullet className="w-5"/>
                     </div>
                     <p className="mt-5">
@@ -48,7 +48,7 @@ const Header = () => {
                         <h1 className=" font-bold text-lg">
                             Connect
                         </h1>
-                        <div className="underlines mt-1 h-0.5 w-full" />
+                        <div className="underlines mt-0.5 h-0.5 w-full" />
                         <IconVerified className="w-5.5"/>
                     </div>
                     
