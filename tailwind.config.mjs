@@ -13,7 +13,7 @@ export default {
     },
     extend: { 
       animation: {
-        spin: 'spin 3s linear infinite',
+        spin: 'spin 10s linear infinite',
       },
       keyframes: {
         spin: {
