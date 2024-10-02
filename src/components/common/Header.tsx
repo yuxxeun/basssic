@@ -1,6 +1,7 @@
 import { IconBrandJustd, IconBrandReactjs, IconLoader2 } from "justd-icons";
 import Container from "./Container";
 import { Constant } from "../../utils/constant";
+import NBJWidget from "../core/NBJ";
 
 const Header = () => {
     return (
