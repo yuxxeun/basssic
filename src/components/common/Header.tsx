@@ -38,7 +38,7 @@ const Header = () => {
                         Mindful that  <span className="tracking-wide font-newsreaderItalic font-semibold">everything around me is someone’s life work</span>.
                         <br />
                         <br />
-                        All I want to do is build websites. 
+                        All I want to do is build web-app's. 
                         Typography, motion design, copywriting, performance—the web is an endless medium of opportunity and creativity of which I’ve only scratched the surface.
                         <br />
                         <br />

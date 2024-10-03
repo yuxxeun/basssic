@@ -62,9 +62,7 @@ const Footer = () => {
                                     Well you find this.
                                 </span>    
                                 <br /><br />
-                                I’m reciting that <span className='tracking-wide font-newsreaderItalic font-semibold'>quality affects all aspects of my pursuits</span>. 
-                                <br />
-                                I want to <span className='font-newsreaderItalic font-semibold'>imbue quality</span> in everything I do. This skill develops while <span className='tracking-wide font-newsreaderItalic font-semibold'>doing</span>. Not thinking, not imagining, <span className='tracking-wide font-newsreaderItalic font-semibold'>doing</span>. It is learned through learning and experimenting and consistency and pacing.
+                                I’m reciting that <span className='tracking-wide font-newsreaderItalic font-semibold'>quality affects all aspects of my pursuits</span>. I want to <span className='font-newsreaderItalic font-semibold'>imbue quality</span> in everything I do. This skill develops while <span className='tracking-wide font-newsreaderItalic font-semibold'>doing</span>. Not thinking, not imagining, <span className='tracking-wide font-newsreaderItalic font-semibold'>doing</span>. It is learned through learning and experimenting and consistency and pacing.
                                 <br /><br />
                                 Above these all, I Love You.
                             </p>
