@@ -1,7 +1,6 @@
-import { IconBrandJustd, IconBrandReactjs, IconLoader2 } from "justd-icons";
+import { IconBrandLayers, IconBrandReactjs, IconLoader2 } from "justd-icons";
 import Container from "./Container";
 import { Constant } from "../../utils/constant";
-import NBJWidget from "../core/NBJ";
 
 const Header = () => {
     return (
@@ -9,7 +8,7 @@ const Header = () => {
 	   	<Container>
             <div className="animate-fade-right flex items-center gap-3">
                 <div className="border border-[#2e2e2e] rounded-lg">
-                    <IconBrandJustd className="w-5 h-5 m-2"/> 
+                    <IconBrandLayers className="w-5 h-5 m-2"/> 
                 </div>
                 <div>
                     <h1 className="text-xl tracking-wider font-semibold">
@@ -27,7 +26,7 @@ const Header = () => {
 
                 <div className="my-16">
                     <div className="flex gap-3 items-center">
-                            <h1 className=" font-bold text-lg">
+                            <h1 className="tracking-wider font-bold text-lg">
                                 Now
                             </h1>
                             <div className="underlines mt-0.5 h-0.5 w-full" />
@@ -48,7 +47,7 @@ const Header = () => {
 
                 <div>
                     <div className="flex gap-3 items-center">
-                        <h1 className=" font-bold text-lg">
+                        <h1 className="tracking-wider font-bold text-lg">
                             Connect
                         </h1>
                         <div className="underlines mt-0.5 h-0.5 w-full" />

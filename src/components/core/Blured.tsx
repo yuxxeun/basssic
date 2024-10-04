@@ -1,4 +1,3 @@
-// src/components/Blured.js
 import { useEffect, useState } from 'react';
 
 export default function Blured() {

@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+import { Constant } from '../utils/constant';
+import Meta from '../components/core/Meta.astro';
+import NotFound from '../components/common/NotFound';
+
+const title = "Not Found";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={Constant.description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<Meta />
+		<title>{title}</title>
+	</head>
+	<body class="leading-normal tracking-normal font-delight text-[16px] text-[#e1e1e1]">
+      <NotFound client:load/>  
+    </body>
+    
+</html>
