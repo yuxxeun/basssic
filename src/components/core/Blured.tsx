@@ -20,10 +20,6 @@ export default function Blured() {
     }, []);
 
     return (
-        <>
-            <div className='blur'>
-                <div className='overlay'></div>
-            </div>
-        </>
+        <div className="h-24 w-full bg-gradient-to-b from-[#1a1a1a] to-transparent sticky z-10 top-0"/>
     );
 }
