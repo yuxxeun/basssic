@@ -55,7 +55,7 @@ const Footer = () => {
                     </div>
                 </Container>
                 {isVisible && (
-                    <div className='border-t border-[#2e2e2e] py-20 mt-3 '> 
+                    <div className='border-t border-[#2e2e2e] py-32 mt-3 '> 
                     <Container className='lg:px-8 px-7'>          
                             <p className={`${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'}`}>
                                 <span className='tracking-wide font-newsreaderItalic font-semibold'>

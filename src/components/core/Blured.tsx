@@ -20,6 +20,6 @@ export default function Blured() {
     }, []);
 
     return (
-        <div className="h-24 w-full bg-gradient-to-b from-[#1a1a1a] to-transparent sticky z-10 top-0"/>
+        <div className="h-[4rem] w-full bg-gradient-to-b from-[#1a1a1a] to-transparent sticky z-50 top-0 pt-5"/>
     );
 }
