@@ -3,13 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: 'Newsreader-VariableFont';
-        src: url('/fonts/Newsreader/Newsreader-VariableFont.woff2') format('woff2');
-        font-weight: 400;
-        font-display: swap;
-        font-style: normal;
-    }
     
     @font-face {
         font-family: 'Newsreader-Italic-VariableFont';
@@ -17,14 +10,6 @@
         font-weight: 400;
         font-display: swap;
         font-style: italic;
-    }
-    
-    @font-face {
-        font-family: 'Neue-Montreal-Medium';
-        src: url('/fonts/Neue/Neue-Montreal-Medium.woff2') format('woff2');
-        font-weight: 900;
-        font-display: swap;
-        font-style: normal;
     }
     
     @font-face {

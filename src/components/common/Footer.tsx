@@ -36,11 +36,11 @@ const Footer = () => {
         <>
                 <Container className="lg:px-8 px-6 text-[#666666] flex items-center justify-between">
                     <div>
-                        <p>
+                        <p className='font-delight'>
                             {randomPoem}
                         </p>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex font-delight items-center gap-2">
                         <ScreenDimensions/>
                         {isVisible ? (
                                 <IconArrowTriangleUpFill className="w-4 cursor-pointer" 
@@ -55,7 +55,7 @@ const Footer = () => {
                     </div>
                 </Container>
                 {isVisible && (
-                    <div className='border-t border-[#2e2e2e] py-32 mt-3 '> 
+                    <div className='border-t font-delight border-[#2e2e2e] py-32 mt-3 '> 
                     <Container className='lg:px-8 px-7'>          
                             <p className={`${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'}`}>
                                 <span className='tracking-wide font-newsreaderItalic font-semibold'>

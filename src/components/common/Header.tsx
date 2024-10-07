@@ -11,12 +11,12 @@ const Header = () => {
                     <IconBrandLayers className="w-5 h-5 m-2"/> 
                 </div>
                 <div>
-                    <h1 className="text-xl tracking-wider font-semibold">
+                    <h1 className="text-xl font-delight tracking-wider font-semibold">
                         {Constant.title}
                     </h1>
                 </div>
             </div>
-            <div className="mt-8 mb-24 animate-fade-up animate-delay-700">
+            <div className="font-delight mt-8 mb-24 animate-fade-up animate-delay-700">
                 <p>
                     <span className="font-newsreaderItalic tracking-wide font-semibold">Crafting interfaces. </span>
                     Building polished software and web experiences.
@@ -34,7 +34,7 @@ const Header = () => {
                                 <IconLoader2 className="w-5 h-5 animate-spin animate-delay-2000"/>
                             </div>
                     </div>
-                    <p className="mt-5 animate-fade-down animate-delay-[2800ms]">
+                    <p className="mt-5 font-delight animate-fade-down animate-delay-[2800ms]">
                         Developing skill through doing, guiltlessly exploring passion and interests, imbuing quality. 
                         Mindful that  <span className="tracking-wide font-newsreaderItalic font-semibold">everything around me is someone’s life work</span>.
                         <br />
