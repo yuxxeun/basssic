@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import { Constant } from '../utils/constant';
-import Meta from '../components/core/Meta.astro';
 import NotFound from '../components/common/NotFound';
 
 const title = "Not Found";
@@ -13,9 +12,18 @@ const title = "Not Found";
 		<meta charset="UTF-8" />
 		<meta name="description" content={Constant.description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<Meta />
+		<linPk rel="icon" type="image/svg+xml" href="/icon.svg" />
+		<meta name="generator" content={Astro.generator} />	
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://basssic.vercel.app/" />
+		<meta property="og:title" content="Basssic" />
+		<meta property="og:description" content="Crafting interfaces." />
+		<meta property="og:image" content="https://github.com/yuxxeun/meta/blob/main/img/gray.jpg?raw=true" />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://basssic.vercel.app/" />
+		<meta property="twitter:title" content="Basssic" />
+		<meta property="twitter:description" content="Crafting interfaces." />
+		<meta property="twitter:image" content="https://github.com/yuxxeun/meta/blob/main/img/gray.jpg?raw=true" />
 		<title>{title}</title>
 	</head>
 	<body class="leading-normal tracking-normal font-delight text-[16px] text-[#e1e1e1]">
