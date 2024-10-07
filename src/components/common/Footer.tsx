@@ -36,11 +36,11 @@ const Footer = () => {
         <>
                 <Container className="lg:px-8 px-6 text-[#666666] flex items-center justify-between">
                     <div>
-                        <p className='font-delight'>
+                        <p>
                             {randomPoem}
                         </p>
                     </div>
-                    <div className="flex font-delight items-center gap-2">
+                    <div className="flex items-center gap-2">
                         <ScreenDimensions/>
                         {isVisible ? (
                                 <IconArrowTriangleUpFill className="w-4 cursor-pointer" 
