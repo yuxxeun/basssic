@@ -1,11 +1,11 @@
 import { ReactLenis } from 'lenis/react'
 
 function SmoothScroll({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
-  return <ReactLenis root>{children}</ReactLenis>;
+  return <ReactLenis root>{children}</ReactLenis>
 }
 
-export default SmoothScroll;
+export default SmoothScroll

@@ -7,21 +7,19 @@ export default {
     fontFamily: {
       sans: ['Inter', ...defaultTheme.fontFamily.sans],
       newsreaderItalic: ['Newsreader-Italic-VariableFont'],
-      delight: ['Neue-Montreal-Regular-400', 'sans-serif'],
+      delight: ['Neue-Montreal-Regular-400', 'sans-serif']
     },
-    extend: { 
+    extend: {
       animation: {
-        spin: 'spin 10s linear infinite',
+        spin: 'spin 10s linear infinite'
       },
       keyframes: {
         spin: {
           '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
-        },
-      },
-    },
+          '100%': { transform: 'rotate(360deg)' }
+        }
+      }
+    }
   },
-  plugins: [
-    require('tailwindcss-animated'),
-  ],
+  plugins: [require('tailwindcss-animated')]
 }
