@@ -19,5 +19,7 @@ export default function Blured() {
     }
   }, [])
 
-  return <div className="h-[4rem] mb-12 w-full bg-gradient-to-b from-[#1a1a1a] to-transparent sticky z-50 top-0 pt-5" />
+  return (
+    <div className="h-[5rem] mb-12 w-full bg-gradient-to-b from-[#1a1a1a] to-transparent sticky z-50 -top-2 pt-5" />
+  )
 }
