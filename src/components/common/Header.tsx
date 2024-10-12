@@ -15,7 +15,7 @@ const Header = () => {
             <h1 className="text-xl font-delight tracking-wider font-semibold">{Constant.title}</h1>
           </div>
         </div>
-        <div className="mt-8 mb-24 animate-fade-up animate-delay-700">
+        <div className="mt-8 mb-24 font-delight  animate-fade-up animate-delay-700">
           <p>
             <span className="font-newsreaderItalic tracking-wide font-semibold">Crafting interfaces. </span>
             Building polished software and web experiences. Experimenting with magical details in user interfaces.

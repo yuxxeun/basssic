@@ -31,7 +31,7 @@ const Footer = () => {
 
   return (
     <>
-      <Container className="lg:px-8 px-6 text-[#666666] flex items-center justify-between">
+      <Container className="lg:px-8 px-6 text-[#666666] font-delight flex items-center justify-between">
         <div>
           <p>{randomPoem}</p>
         </div>

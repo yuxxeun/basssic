@@ -7,7 +7,7 @@ const NotFound = () => {
   return (
     <>
       <Container>
-        <div className="overflow-hidden lg:px-0 px-4 flex items-center justify-center min-h-screen">
+        <div className="font-delight overflow-hidden lg:px-0 px-4 flex items-center justify-center min-h-screen">
           <div>
             <div className="animate-fade-up flex items-center gap-3">
               <div className="border border-[#2e2e2e] rounded-lg">
@@ -16,7 +16,7 @@ const NotFound = () => {
                 </a>
               </div>
               <div>
-                <h1 className="text-xl tracking-wider font-semibold">404—Not found</h1>
+                <h1 className="text-xlfont-delight tracking-wider font-semibold">404—Not found</h1>
               </div>
             </div>
             <p className="mt-5 animate-fade-down">
