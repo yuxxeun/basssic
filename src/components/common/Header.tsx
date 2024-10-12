@@ -18,15 +18,17 @@ const Header = () => {
     const newAudio = new Audio('/soundtrack.mp3')
     setAudio(newAudio)
 
-    newAudio.addEventListener('ended', () => {
+    const handleAudioEnded = () => {
       setIsPlaying(false)
-      setConfettiPlayed(false)
-    })
+      setIcon(<IconBrandLayers className="w-5 h-5" />)
+    }
+
+    newAudio.addEventListener('ended', handleAudioEnded)
 
     return () => {
       newAudio.pause()
       newAudio.src = ''
-      newAudio.removeEventListener('ended', () => {})
+      newAudio.removeEventListener('ended', handleAudioEnded)
     }
   }, [])
 
