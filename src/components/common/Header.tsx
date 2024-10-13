@@ -78,7 +78,7 @@ const Header = () => {
           ref={canvasRef}
           width={window.innerWidth}
           height={window.innerHeight}
-          className="absolute top-0 left-0 pointer-events-none z-50 w-full"
+          className="absolute top-0 left-0 pointer-events-none z-50"
         />
         <div className="animate-fade-right flex items-center gap-3">
           <div className="border border-[#2e2e2e] rounded-lg overflow-hidden">
