@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 
 import confetti from 'canvas-confetti'
 import { IconBrandLayers, IconBrandReactjs, IconLoader2, IconPauseFill } from 'justd-icons'
+import { toast } from 'sonner'
 
 import { Constant } from '../../utils/constant'
 import Container from './Container'
@@ -58,6 +59,7 @@ const Header = () => {
         setIcon(<IconBrandLayers className="w-5 h-5" />)
       } else {
         audio.play()
+        toast.success(<p className="font-delight">Enjoy this peaceful moment, accompanied by soothing sounds.</p>)
         if (!confettiPlayed) {
           setConfettiPlayed(true)
           triggerConfetti()
@@ -76,7 +78,7 @@ const Header = () => {
           ref={canvasRef}
           width={window.innerWidth}
           height={window.innerHeight}
-          className="absolute top-0 left-0 pointer-events-none z-50"
+          className="absolute top-0 left-0 pointer-events-none z-50 w-full"
         />
         <div className="animate-fade-right flex items-center gap-3">
           <div className="border border-[#2e2e2e] rounded-lg overflow-hidden">
@@ -97,6 +99,13 @@ const Header = () => {
             <span className="font-newsreaderItalic tracking-wide font-semibold">Crafting interfaces. </span>
             Building polished software and web experiences. Experimenting with magical details in user interfaces.
             Webmaster at <span className="underlines">Basement</span>.
+            <br />
+            <br />
+            Explore beyond the limits of my feet through reading, check{' '}
+            <a href="/bookmark" className="underlines">
+              Bookmark
+            </a>{' '}
+            section.
           </p>
           <div className="my-16">
             <div className="flex gap-3 items-center">
