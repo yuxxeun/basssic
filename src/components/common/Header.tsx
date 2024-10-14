@@ -74,12 +74,12 @@ const Header = () => {
   return (
     <>
       <Container>
-        {/* <canvas
+        <canvas
           ref={canvasRef}
-          width={500}
-          height={500}
+          width={window.innerWidth}
+          height={window.innerHeight}
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-50"
-        /> */}
+        />
         <div className="animate-fade-right flex items-center gap-3">
           <div className="border border-[#2e2e2e] rounded-lg overflow-hidden">
             <button className="m-2" onClick={togglePlay}>

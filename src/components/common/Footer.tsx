@@ -31,23 +31,25 @@ const Footer = () => {
 
   return (
     <>
-      <Container className="lg:px-8 px-6 text-[#666666] font-delight flex items-center justify-between">
-        <div>
-          <p>{randomPoem}</p>
-        </div>
-        <div className="flex items-center gap-2">
-          <ScreenDimensions />
-          {isVisible ? (
-            <IconArrowTriangleUpFill className="w-4 cursor-pointer" onClick={handleIconClick} />
-          ) : (
-            <IconArrowTriangleDown className="w-4 cursor-pointer animate-pulse" onClick={handleIconClick} />
-          )}
-        </div>
-      </Container>
+      <div className="w-full border-t border-[#2e2e2e] py-2 animate-fade-up animate-delay-[3000ms]">
+        <Container className="lg:px-8 px-6 text-[#666666] font-delight flex items-center justify-between">
+          <div>
+            <p>{randomPoem}</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <ScreenDimensions />
+            {isVisible ? (
+              <IconArrowTriangleUpFill className="w-4 cursor-pointer" onClick={handleIconClick} />
+            ) : (
+              <IconArrowTriangleDown className="w-4 cursor-pointer animate-pulse" onClick={handleIconClick} />
+            )}
+          </div>
+        </Container>
+      </div>
       {isVisible && (
-        <div className="border-t font-delight border-[#2e2e2e] py-32 mt-3 w-full">
+        <div className="border-t font-delight border-[#2e2e2e] py-2 w-full">
           <Container className="lg:px-8 px-7">
-            <p className={`${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'}`}>
+            <p className={`${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'} py-24`}>
               <span className="tracking-wide font-newsreaderItalic font-semibold">Well you find this.</span>
               <br />
               <br />
