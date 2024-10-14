@@ -44,7 +44,7 @@ const Header = () => {
     })({
       startVelocity: 20,
       particleCount: 140,
-      spread: 2000,
+      spread: 1500,
       gravity: 0.6,
       origin: { y: 0.425 },
       colors: ['#D3D3D3', '#FFFFFF', '#000000']
@@ -74,12 +74,12 @@ const Header = () => {
   return (
     <>
       <Container>
-        <canvas
+        {/* <canvas
           ref={canvasRef}
-          width={window.innerWidth}
-          height={window.innerHeight}
-          className="absolute top-0 left-0 pointer-events-none z-50"
-        />
+          width={500}
+          height={500}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-50"
+        /> */}
         <div className="animate-fade-right flex items-center gap-3">
           <div className="border border-[#2e2e2e] rounded-lg overflow-hidden">
             <button className="m-2" onClick={togglePlay}>
