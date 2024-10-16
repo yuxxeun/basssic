@@ -55,10 +55,11 @@ const Footer = () => {
               <br />
               I’m reciting that{' '}
               <span className="font-italianno text-2xl tracking-wider">quality affects all aspects of my pursuits</span>
-              . I want to <span className="font-italianno text-xl tracking-wider">imbue quality</span> in everything I
-              do. This skill develops while <span className="font-italianno text-2xl tracking-wider">doing</span>. Not
-              thinking, not imagining, <span className="font-italianno text-2xl tracking-wider">doing</span>. It is
-              learned through learning and experimenting and consistency and pacing.
+              . <br />I want to <span className="font-italianno text-2xl tracking-wider">imbue quality</span> in
+              everything I do. This skill develops while{' '}
+              <span className="font-italianno text-2xl tracking-wider">doing</span>. Not thinking, not imagining,{' '}
+              <span className="font-italianno text-2xl tracking-wider">doing</span>. It is learned through learning and
+              experimenting and consistency and pacing.
               <br />
               <br />
               <span className="font-italianno text-2xl tracking-wider">Above these all, I Love You.</span>

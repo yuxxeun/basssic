@@ -135,7 +135,8 @@ const Header = () => {
               </div>
             </div>
             <p className="mt-5 animate-fade-down animate-delay-[2800ms]">
-              Developing skill through doing, guiltlessly exploring passion and interests, imbuing quality. Mindful that{' '}
+              Developing skill through doing, guiltlessly exploring passion and interests, imbuing quality. Mindful that
+              &nbsp;
               <span className="font-italianno text-2xl tracking-wider">
                 everything around me is someone’s life work
               </span>
