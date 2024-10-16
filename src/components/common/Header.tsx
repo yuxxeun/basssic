@@ -105,7 +105,11 @@ const Header = () => {
             <a href="/bookmark" className="underlines">
               Bookmark
             </a>{' '}
-            section.
+            section. Making{' '}
+            <a href="/secreto" className="underlines">
+              Secreto
+            </a>{' '}
+            to draw your random unspoken thoughts.
           </p>
           <div className="my-16">
             <div className="flex gap-3 items-center">
