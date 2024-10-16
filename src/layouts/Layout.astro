@@ -17,9 +17,10 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={Constant.description} />
+		<meta name="keywords" content="yuxxeun, Krido Pambudi" /> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
-		<meta name="generator" content={Astro.generator} />	
+		<meta name="generator" content={Astro.generator} />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://basssic.vercel.app/" />
 		<meta property="og:title" content="Basssic" />
@@ -31,7 +32,7 @@ const { title } = Astro.props;
 		<meta property="twitter:description" content="Crafting interfaces." />
 		<meta property="twitter:image" content="https://raw.githubusercontent.com/yuxxeun/meta/refs/heads/main/img/basssic.png" />
 		<title>{title}</title>
-	</head>
+	</head>	
 	<body class="leading-normal px-0 mx-0 tracking-normal font-delight text-[16px] text-[#e1e1e1]">
 		<SmoothScroll client:load>
 			<Toaster toastOptions={{

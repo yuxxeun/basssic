@@ -63,11 +63,9 @@ const Book = () => {
         <header className="px-1 my-5 animate-fade-up animate-delay-100">
           <h1 className="text-xl font-delight tracking-wider font-semibold">Bookmark</h1>
           <p className="mt-2 animate-fade-up animate-delay-300">
-            Explore beyond the limits of my feet through reading.
+            Break the limits of my feet through read.
             <br />
-            Discovering worlds uncharted and adventures untold.
-            <br />
-            Let me know what is your favorite book? or who is your favorite author?
+            Let me know your favorite book or your favorite author, can you?
           </p>
         </header>
 

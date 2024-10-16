@@ -1,15 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 
 import confetti from 'canvas-confetti'
-import {
-  IconBrandAppleMusic,
-  IconBrandLayers,
-  IconBrandReactjs,
-  IconLoader2,
-  IconMusicNote,
-  IconMusicNoteFill,
-  IconPauseFill
-} from 'justd-icons'
+import { IconBrandAppleMusic, IconBrandLayers, IconBrandReactjs, IconLoader2 } from 'justd-icons'
 import { toast } from 'sonner'
 
 import { Constant } from '../../utils/constant'
@@ -77,7 +69,7 @@ const Header = () => {
           setConfettiPlayed(true)
           triggerConfetti()
         }
-        setIcon(<IconPauseFill className="w-5 h-5" />)
+        setIcon(<IconBrandAppleMusic className="w-5 h-5" />)
       }
       setIsPlaying(!isPlaying)
       setAnimating(false)
@@ -109,27 +101,25 @@ const Header = () => {
         </div>
         <div className="mt-8 mb-24 font-delight animate-fade-up animate-delay-700">
           <p>
-            <span className="font-italianno text-2xl tracking-wider">Crafting interfaces. </span>
+            <span className="font-italianno text-2xl tracking-wide">Crafting interfaces. </span>
             Building polished software and web experiences. Experimenting with magical details in user interfaces.
             Webmaster at <span className="underlines">Basement</span>.
             <br />
             <br />
-            Explore beyond the limits of my feet through reading, check{' '}
+            Break the limits of my feet through read, discover{' '}
             <a href="/bookmark" className="underlines">
               Bookmark
             </a>{' '}
-            section.
-            <br />
-            Making{' '}
+            section. Need medium to draw your random unspoken thoughts? well,{' '}
             <a href="/secreto" className="underlines">
               Secreto
             </a>{' '}
-            to draw your random unspoken thoughts.
+            exists for a reason.
           </p>
           <div className="my-16">
             <div className="flex gap-3 items-center">
-              <h1 className="animate-fade-up animate-delay-700 tracking-wider font-bold text-lg">Now</h1>
-              <div className="animate-fade-right animate-delay-[1800ms] underlines mt-0.5 h-0.5 w-full" />
+              <h1 className="animate-fade-up animate-delay-700 font-italianno text-2xl tracking-wide font-bold">Now</h1>
+              <div className="animate-fade-right animate-delay-[1800ms] underlines h-0.5 w-full" />
               <div className="animate-fade-left animate-delay-[2200ms]">
                 <IconLoader2 className="w-5 h-5 animate-spin animate-delay-2000" />
               </div>
@@ -137,9 +127,7 @@ const Header = () => {
             <p className="mt-5 animate-fade-down animate-delay-[2800ms]">
               Developing skill through doing, guiltlessly exploring passion and interests, imbuing quality. Mindful that
               &nbsp;
-              <span className="font-italianno text-2xl tracking-wider">
-                everything around me is someone’s life work
-              </span>
+              <span className="font-italianno text-2xl tracking-wide">everything around me is someone’s life work</span>
               .
               <br />
               <br />
@@ -155,8 +143,10 @@ const Header = () => {
           </div>
           <div>
             <div className="flex gap-3 items-center">
-              <h1 className="animate-fade-up animate-delay-700 tracking-wider font-bold text-lg">Connect</h1>
-              <div className="animate-fade-right animate-delay-[1800ms] underlines mt-0.5 h-0.5 w-full" />
+              <h1 className="animate-fade-up animate-delay-700 font-italianno text-2xl tracking-wide font-bold">
+                Connect
+              </h1>
+              <div className="animate-fade-right animate-delay-[1800ms] underlines  h-0.5 w-full" />
               <div className="animate-fade-left animate-delay-[2200ms]">
                 <IconBrandReactjs className="animate-spin w-5 h-5" />
               </div>

@@ -47,7 +47,7 @@ const Secreto = () => {
 
   const insertComment = async (comment: string) => {
     setIsSubmitting(true)
-    setError(null) // Reset error state sebelum submit
+    setError(null)
     try {
       const { data, error } = await supabase
         .from('comments')
@@ -55,21 +55,20 @@ const Secreto = () => {
         .single()
 
       if (error) {
-        throw error // Jika ada error, lempar error
+        throw error
       }
 
       if (data) {
-        setComment('') // Clear input
-        setSecrets((prevSecrets) => [data, ...prevSecrets]) // Add new comment immediately
-        showSuccessToast() // Show success toast
-        triggerConfetti() // Trigger confetti animation
+        setComment('')
+        setSecrets((prevSecrets) => [data, ...prevSecrets])
+        showSuccessToast()
+        triggerConfetti()
       }
     } catch (err) {
-      // Set error message hanya jika ada kesalahan
       if (err instanceof Error) {
         setError(err.message)
       }
-      showErrorToast() // Show error toast
+      showErrorToast()
     } finally {
       setIsSubmitting(false)
     }
@@ -156,11 +155,7 @@ const Secreto = () => {
         </a>
         <header className="px-1 my-5 animate-fade-up animate-delay-100">
           <h1 className="text-xl font-delight tracking-wider font-semibold">Secreto</h1>
-          <p className="mt-2 animate-fade-up animate-delay-300">
-            Write your unspoken thoughts
-            <br />
-            Let me hear them all.
-          </p>
+          <p className="mt-2 animate-fade-up animate-delay-300">A medium to draw your random unspoken thoughts.</p>
         </header>
 
         {loading && (
@@ -168,15 +163,16 @@ const Secreto = () => {
             <IconLoader2 className="h-5 w-5 animate-spin" />
           </div>
         )}
-        {error && <p className="p-3 text-red-500 animate-fade-up animate-delay-500">Error loading secreto: {error}</p>}
+        {error && <p className="p-3 text-rose-500 animate-fade-up animate-delay-500">Error loading secreto: {error}</p>}
 
         <div className="my-5 animate-fade-up animate-delay-700">
           <form onSubmit={handleSubmit} className="mt-8">
             <div className="space-y-2 border border-[#2e2e2e] rounded-xl p-4 bg-[#232323]/30 backdrop-blur-3xl">
               <textarea
+                disabled
                 value={comment}
                 onChange={handleCommentChange}
-                placeholder="Type your secret here..."
+                placeholder="Wait, I'm preparing for this goddamn section 😤"
                 className="w-full p-2 h-20 border-2 border-[#2e2e2e] rounded-lg bg-[#1a1a1a] focus:bg-[#2e2e2e] focus:outline-none transition-colors"
                 rows={4}
               />

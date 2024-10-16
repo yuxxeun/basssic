@@ -50,19 +50,19 @@ const Footer = () => {
         <div className="border-t font-delight border-[#2e2e2e] py-2 w-full">
           <Container className="lg:px-8 px-7">
             <p className={`${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'} py-24`}>
-              <span className="font-italianno text-2xl tracking-wider">Well you find this.</span>
+              <span className="font-italianno text-2xl tracking-wide">Well you find this.</span>
               <br />
               <br />
               I’m reciting that{' '}
-              <span className="font-italianno text-2xl tracking-wider">quality affects all aspects of my pursuits</span>
+              <span className="font-italianno text-2xl tracking-wide">quality affects all aspects of my pursuits</span>
               . <br />I want to <span className="font-italianno text-2xl tracking-wider">imbue quality</span> in
               everything I do. This skill develops while{' '}
-              <span className="font-italianno text-2xl tracking-wider">doing</span>. Not thinking, not imagining,{' '}
-              <span className="font-italianno text-2xl tracking-wider">doing</span>. It is learned through learning and
+              <span className="font-italianno text-2xl tracking-wide">doing</span>. Not thinking, not imagining,{' '}
+              <span className="font-italianno text-2xl tracking-wide">doing</span>. It is learned through learning and
               experimenting and consistency and pacing.
               <br />
               <br />
-              <span className="font-italianno text-2xl tracking-wider">Above these all, I Love You.</span>
+              <span className="font-italianno text-2xl tracking-wide">Above these all, I Love You.</span>
             </p>
           </Container>
         </div>
