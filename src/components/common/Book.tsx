@@ -51,7 +51,7 @@ const Book = () => {
 
   return (
     <>
-      <div className="lg:px-3 px-1">
+      <div className="lg:px-3 px-1 mb-24">
         <a href="/" className="bg-[#232323]/30 backdrop-blur-3xl">
           <div className="lg:px-1.5 px-1 w-fit border border-[#2e2e2e] rounded-xl p-1.5 bg-[#232323]/30 backdrop-blur-3xl animate-fade-up animate-delay-700">
             <div className="bg-[#232323] px-1.5 rounded-lg flex items-center gap-2">

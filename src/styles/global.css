@@ -18,6 +18,30 @@
     font-display: swap;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: 'Italianno-Regular';
+    src: url('/fonts/Italianno/Italianno-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Tangerine-Regular';
+    src: url('/fonts/Tangerine/Tangerine-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Tangerine-Bold';
+    src: url('/fonts/Tangerine/Tangerine-Bold.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -71,6 +95,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   touch-action: manipulation;
+  overflow-x: hidden;
 }
 
 .underlines {

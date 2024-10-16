@@ -1,7 +1,15 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 
 import confetti from 'canvas-confetti'
-import { IconBrandLayers, IconBrandReactjs, IconLoader2, IconPauseFill } from 'justd-icons'
+import {
+  IconBrandAppleMusic,
+  IconBrandLayers,
+  IconBrandReactjs,
+  IconLoader2,
+  IconMusicNote,
+  IconMusicNoteFill,
+  IconPauseFill
+} from 'justd-icons'
 import { toast } from 'sonner'
 
 import { Constant } from '../../utils/constant'
@@ -59,7 +67,12 @@ const Header = () => {
         setIcon(<IconBrandLayers className="w-5 h-5" />)
       } else {
         audio.play()
-        toast.success(<p className="font-delight">Enjoy this peaceful moment, accompanied by soothing sounds.</p>)
+        toast.success(
+          <div className="tracking-wider font-delight flex items-top">
+            <IconBrandAppleMusic className="size-6" />
+            <span className="ml-2">Enjoy this peaceful moment, accompanied by soothing sounds.</span>
+          </div>
+        )
         if (!confettiPlayed) {
           setConfettiPlayed(true)
           triggerConfetti()
@@ -96,7 +109,7 @@ const Header = () => {
         </div>
         <div className="mt-8 mb-24 font-delight animate-fade-up animate-delay-700">
           <p>
-            <span className="font-newsreaderItalic tracking-wide font-semibold">Crafting interfaces. </span>
+            <span className="font-italianno text-2xl tracking-wider">Crafting interfaces. </span>
             Building polished software and web experiences. Experimenting with magical details in user interfaces.
             Webmaster at <span className="underlines">Basement</span>.
             <br />
@@ -105,7 +118,9 @@ const Header = () => {
             <a href="/bookmark" className="underlines">
               Bookmark
             </a>{' '}
-            section. Making{' '}
+            section.
+            <br />
+            Making{' '}
             <a href="/secreto" className="underlines">
               Secreto
             </a>{' '}
@@ -121,7 +136,7 @@ const Header = () => {
             </div>
             <p className="mt-5 animate-fade-down animate-delay-[2800ms]">
               Developing skill through doing, guiltlessly exploring passion and interests, imbuing quality. Mindful that{' '}
-              <span className="tracking-wide font-newsreaderItalic font-semibold">
+              <span className="font-italianno text-2xl tracking-wider">
                 everything around me is someone’s life work
               </span>
               .

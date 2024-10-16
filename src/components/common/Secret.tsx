@@ -1,29 +1,31 @@
-'use client'
+import { useEffect, useState, useRef, useCallback } from 'react'
 
-import { useEffect, useState } from 'react'
-
+import confetti from 'canvas-confetti'
 import dayjs from 'dayjs'
 import {
   IconArrowLeft,
   IconBellAlarm,
+  IconCircleCheckFill,
+  IconCircleXFill,
   IconCursorClick,
   IconDateTime,
-  IconLoader2,
-  IconSend,
-  IconSend2
+  IconLoader2
 } from 'justd-icons'
+import { toast } from 'sonner'
 
 import { supabase } from '../../utils/supabase'
 
 const Secreto = () => {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null)
   const [secrets, setSecrets] = useState<any[]>([])
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
+  const [comment, setComment] = useState<string>('')
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
 
   useEffect(() => {
     const fetchSecrets = async () => {
       setLoading(true)
-
       try {
         const { data, error } = await supabase
           .from('comments')
@@ -43,6 +45,84 @@ const Secreto = () => {
     fetchSecrets()
   }, [])
 
+  const insertComment = async (comment: string) => {
+    setIsSubmitting(true)
+    setError(null) // Reset error state sebelum submit
+    try {
+      const { data, error } = await supabase
+        .from('comments')
+        .insert([{ txt: comment }])
+        .single()
+
+      if (error) {
+        throw error // Jika ada error, lempar error
+      }
+
+      if (data) {
+        setComment('') // Clear input
+        setSecrets((prevSecrets) => [data, ...prevSecrets]) // Add new comment immediately
+        showSuccessToast() // Show success toast
+        triggerConfetti() // Trigger confetti animation
+      }
+    } catch (err) {
+      // Set error message hanya jika ada kesalahan
+      if (err instanceof Error) {
+        setError(err.message)
+      }
+      showErrorToast() // Show error toast
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const showSuccessToast = () => {
+    toast.success(
+      <div className="tracking-wider font-delight flex items-top">
+        <IconCircleCheckFill className="size-5" />
+        <span className="ml-2">Message sent successfully!</span>
+      </div>
+    )
+  }
+
+  const showErrorToast = () => {
+    toast.error(
+      <div className="tracking-wider font-delight flex items-top">
+        <IconCircleXFill className="size-5" />
+        <span className="ml-2">Please enter at least 5 characters.</span>
+      </div>
+    )
+  }
+
+  const triggerConfetti = useCallback(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    confetti.create(canvas, {
+      resize: true,
+      useWorker: true
+    })({
+      startVelocity: 20,
+      particleCount: 140,
+      spread: 1500,
+      gravity: 0.6,
+      origin: { y: 0.5 },
+      colors: ['#D3D3D3', '#FFFFFF', '#000000']
+    })
+  }, [])
+
+  const handleCommentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setComment(e.target.value)
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (comment.trim().length >= 5) {
+      insertComment(comment)
+    } else {
+      showErrorToast()
+    }
+  }
+
   const groupedSecrets = secrets.reduce(
     (acc, secret) => {
       const year = new Date(secret.created_at).getFullYear()
@@ -59,7 +139,13 @@ const Secreto = () => {
 
   return (
     <>
-      <div className="lg:px-3 px-1">
+      <canvas
+        ref={canvasRef}
+        width={window.innerWidth}
+        height={window.innerHeight}
+        className="absolute top-0 left-0 pointer-events-none z-50"
+      />
+      <div className="lg:px-3 px-1 mb-24">
         <a href="/" className="bg-[#232323]/30 backdrop-blur-3xl">
           <div className="lg:px-1.5 px-1 w-fit border border-[#2e2e2e] rounded-xl p-1.5 bg-[#232323]/30 backdrop-blur-3xl animate-fade-up animate-delay-700">
             <div className="bg-[#232323] px-1.5 rounded-lg flex items-center gap-2">
@@ -85,21 +171,24 @@ const Secreto = () => {
         {error && <p className="p-3 text-red-500 animate-fade-up animate-delay-500">Error loading secreto: {error}</p>}
 
         <div className="my-5 animate-fade-up animate-delay-700">
-          <form className="mt-8">
+          <form onSubmit={handleSubmit} className="mt-8">
             <div className="space-y-2 border border-[#2e2e2e] rounded-xl p-4 bg-[#232323]/30 backdrop-blur-3xl">
               <textarea
-                disabled
-                placeholder="Wait, I'm preparing this section."
-                className="w-full cursor-not-allowed p-2 h-20 border-2 border-[#2e2e2e] rounded-lg bg-[#1a1a1a] focus:bg-[#2e2e2e] focus:outline-none transition-colors"
+                value={comment}
+                onChange={handleCommentChange}
+                placeholder="Type your secret here..."
+                className="w-full p-2 h-20 border-2 border-[#2e2e2e] rounded-lg bg-[#1a1a1a] focus:bg-[#2e2e2e] focus:outline-none transition-colors"
                 rows={4}
               />
               <button
-                disabled
+                disabled={isSubmitting}
                 type="submit"
-                className="w-full cursor-not-allowed rounded-full border border-[#2e2e2e] p-1.5 bg-[#232323]/30"
+                className="w-full rounded-full border border-[#2e2e2e] p-1.5 bg-[#232323]/30"
               >
-                <div className="gap-2 flex items-start bg-[#2e2e2e] rounded-3xl py-1.5 justify-center">
-                  <IconCursorClick className="size-5" /> Send Message
+                <div
+                  className={`gap-2 flex items-start rounded-3xl py-1.5 justify-center transition-colors duration-300 ${comment.trim().length >= 5 ? 'bg-[#232323]' : 'bg-[#1a1a1a]'}`}
+                >
+                  <IconCursorClick className="size-5" /> {isSubmitting ? 'Sending...' : 'Send Message'}
                 </div>
               </button>
             </div>

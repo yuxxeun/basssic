@@ -31,7 +31,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="w-full border-t border-[#2e2e2e] py-2 animate-fade-up animate-delay-[3000ms] mt-12">
+      <div className="w-full border-t border-[#2e2e2e] py-2 animate-fade-up animate-delay-[3000ms]">
         <Container className="lg:px-8 px-6 text-[#666666] font-delight flex items-center justify-between">
           <div>
             <p>{randomPoem}</p>
@@ -50,21 +50,18 @@ const Footer = () => {
         <div className="border-t font-delight border-[#2e2e2e] py-2 w-full">
           <Container className="lg:px-8 px-7">
             <p className={`${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'} py-24`}>
-              <span className="tracking-wide font-newsreaderItalic font-semibold">Well you find this.</span>
+              <span className="font-italianno text-2xl tracking-wider">Well you find this.</span>
               <br />
               <br />
               I’m reciting that{' '}
-              <span className="tracking-wide font-newsreaderItalic font-semibold">
-                quality affects all aspects of my pursuits
-              </span>
-              . I want to <span className="font-newsreaderItalic font-semibold">imbue quality</span> in everything I do.
-              This skill develops while <span className="tracking-wide font-newsreaderItalic font-semibold">doing</span>
-              . Not thinking, not imagining,{' '}
-              <span className="tracking-wide font-newsreaderItalic font-semibold">doing</span>. It is learned through
-              learning and experimenting and consistency and pacing.
+              <span className="font-italianno text-2xl tracking-wider">quality affects all aspects of my pursuits</span>
+              . I want to <span className="font-italianno text-xl tracking-wider">imbue quality</span> in everything I
+              do. This skill develops while <span className="font-italianno text-2xl tracking-wider">doing</span>. Not
+              thinking, not imagining, <span className="font-italianno text-2xl tracking-wider">doing</span>. It is
+              learned through learning and experimenting and consistency and pacing.
               <br />
               <br />
-              Above these all, I Love You.
+              <span className="font-italianno text-2xl tracking-wider">Above these all, I Love You.</span>
             </p>
           </Container>
         </div>

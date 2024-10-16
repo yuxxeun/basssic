@@ -7,7 +7,10 @@ export default {
     fontFamily: {
       sans: ['Inter', ...defaultTheme.fontFamily.sans],
       newsreaderItalic: ['Newsreader-Italic-VariableFont'],
-      delight: ['Neue-Montreal-Regular-400', 'sans-serif']
+      delight: ['Neue-Montreal-Regular-400', 'sans-serif'],
+      italianno: ['Italianno-Regular', 'sans-serif'],
+      tangerineRegular: ['Tangerine-Regular', 'sans-serif'],
+      tangerineBold: ['Tangerine-Bold', 'sans-serif']
     },
     extend: {
       animation: {
