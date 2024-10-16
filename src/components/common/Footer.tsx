@@ -31,7 +31,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="w-full border-t border-[#2e2e2e] py-2 animate-fade-up animate-delay-[3000ms]">
+      <div className="w-full border-t border-[#2e2e2e] py-2 animate-fade-up animate-delay-[3000ms] mt-12">
         <Container className="lg:px-8 px-6 text-[#666666] font-delight flex items-center justify-between">
           <div>
             <p>{randomPoem}</p>
