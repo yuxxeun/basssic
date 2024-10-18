@@ -117,7 +117,7 @@ const Header = () => {
             exists for a reason.
             <br />
             <br />
-            <span className="font-italianno text-2xl tracking-wide">Fancy and artsy</span>—this is what I’m working on.{' '}
+            Fancy, artsy & edgy—this is what I’m working on.{' '}
             <br className="lg:hidden visible" />
             Sneak peek my selected{' '}
             <a href="/works" className="underlines">
@@ -166,8 +166,19 @@ const Header = () => {
               leaves us feeling empty.
               <br />
               <br />
-              Reach me with handle <span className="underlines bg-[#2e2e2e]">@yuxxeun</span> on internet—whether on
-              Instagram, X (formerly Twitter), GitHub, etc.
+              Reach me with handle <span className="bg-[#2e2e2e]">@yuxxeun</span> on internet—whether on{' '}
+              <a href="https://instagram.com/yuxxeun" target="_blank" className="underlines">
+                Instagram
+              </a>
+              ,{' '}
+              <a href="https://x.com/yuxxeun" target="_blank" className="underlines">
+                X (formerly Twitter)
+              </a>
+              ,{' '}
+              <a href="https://github.com/yuxxeun" target="_blank" className="underlines">
+                GitHub
+              </a>
+              , etc.
             </p>
           </div>
         </div>

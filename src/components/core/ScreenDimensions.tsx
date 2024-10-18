@@ -24,7 +24,7 @@ export default function ScreenDimensions() {
   return (
     <div>
       <p>
-        {dimensions.width} x {dimensions.height}
+        {dimensions.width}' x {dimensions.height}'
       </p>
     </div>
   )
