@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Work from '../components/common/Work.tsx';
+import Container from '../components/common/Container';
+---
+
+<Layout title='Works'>
+	<Container>
+		<Work client:only="react"/>
+	</Container>
+</Layout>

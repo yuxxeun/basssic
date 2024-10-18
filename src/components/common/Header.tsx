@@ -115,6 +115,15 @@ const Header = () => {
               Secreto
             </a>{' '}
             exists for a reason.
+            <br />
+            <br />
+            <span className="font-italianno text-2xl tracking-wide">Fancy and artsy</span>—this is what I’m working on.{' '}
+            <br className="lg:hidden visible" />
+            Sneak peek my selected{' '}
+            <a href="/works" className="underlines">
+              Works
+            </a>
+            .
           </p>
           <div className="my-16">
             <div className="flex gap-3 items-center">
