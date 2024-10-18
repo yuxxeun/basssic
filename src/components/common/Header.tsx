@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 
+import { Constant } from '@/utils/constant'
 import confetti from 'canvas-confetti'
 import { IconBrandAppleMusic, IconBrandLayers, IconBrandReactjs, IconLoader2 } from 'justd-icons'
 import { toast } from 'sonner'
 
-import { Constant } from '../../utils/constant'
 import Container from './Container'
 
 const Header = () => {

@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef, useCallback } from 'react'
 
+import { supabase } from '@/utils/supabase'
 import confetti from 'canvas-confetti'
 import dayjs from 'dayjs'
 import {
@@ -12,8 +13,6 @@ import {
   IconLoader2
 } from 'justd-icons'
 import { toast } from 'sonner'
-
-import { supabase } from '../../utils/supabase'
 
 const Secreto = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)

@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from 'react'
 
+import { supabase } from '@/utils/supabase'
 import { IconArrowLeft, IconBook, IconChainLink, IconDateTime, IconHighlightWave, IconLoader2 } from 'justd-icons'
-
-import { supabase } from '../../utils/supabase'
 
 const Book = () => {
   const [bookmarks, setBookmarks] = useState<any[]>([])

@@ -1,6 +1,6 @@
+import '@/styles/global.css'
 import { IconRotateRightFill } from 'justd-icons'
 
-import '../../styles/global.css'
 import Container from './Container'
 
 const NotFound = () => {

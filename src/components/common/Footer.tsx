@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 
+import ScreenDimensions from '@/components/core/ScreenDimensions'
 import { IconArrowTriangleDown, IconArrowTriangleUpFill } from 'justd-icons'
 
-import ScreenDimensions from '../core/ScreenDimensions'
 import Container from './Container'
 
 const poem = ['Pray at the altar of hard work.', 'Sit with your ambient ambition.', 'Find flow.']

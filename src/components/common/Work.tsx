@@ -2,14 +2,8 @@
 
 import { useEffect, useState } from 'react'
 
-import {
-  IconArrowLeft,
-  IconCirclePlaceholderDashedFill,
-  IconLoader2,
-  IconVerifiedFill
-} from 'justd-icons'
-
-import { supabase } from '../../utils/supabase'
+import { supabase } from '@/utils/supabase'
+import { IconArrowLeft, IconCirclePlaceholderDashedFill, IconLoader2, IconVerifiedFill } from 'justd-icons'
 
 const Work = () => {
   const [works, setWorks] = useState<any[]>([])
