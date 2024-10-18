@@ -103,7 +103,7 @@ const Header = () => {
           <p>
             <span className="font-italianno text-2xl tracking-wide">Crafting interfaces. </span>
             Building polished software and web experiences. Experimenting with magical details in user interfaces.
-            Webmaster at <span className="underlines">Basement</span>.
+            Creative Developer at <span className="underlines">Basement</span>.
             <br />
             <br />
             Break the limits of my feet through read, discover{' '}
