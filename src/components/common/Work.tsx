@@ -3,7 +3,14 @@
 import { useEffect, useState } from 'react'
 
 import { supabase } from '@/utils/supabase'
-import { IconArrowLeft, IconCirclePlaceholderDashedFill, IconLoader2, IconVerifiedFill } from 'justd-icons'
+import {
+  IconChainLinkFill,
+  IconGlobe2Fill,
+  IconLoader2,
+  IconReply,
+  IconRepostFill,
+  IconVerifiedFill
+} from 'justd-icons'
 
 const Work = () => {
   const [works, setWorks] = useState<any[]>([])
@@ -49,8 +56,8 @@ const Work = () => {
       <div className="lg:px-3 px-1 mb-24">
         <a href="/" className="bg-[#232323]/30 backdrop-blur-3xl">
           <div className="lg:px-1.5 px-1 w-fit border border-[#2e2e2e] rounded-xl p-1.5 bg-[#232323]/30 backdrop-blur-3xl animate-fade-up animate-delay-700">
-            <div className="bg-[#232323] px-1.5 rounded-lg flex items-center gap-2">
-              <IconArrowLeft className="h-4 w-4" />
+            <div className="bg-[#232323] px-2 rounded-lg flex items-center gap-2">
+              <IconReply className="h-3.5 w-3.5" />
               Home
             </div>
           </div>
@@ -94,12 +101,44 @@ const Work = () => {
                             <h1 className="ftext-md font-delight tracking-wider font-semibold">{work.title}</h1>
                             <IconVerifiedFill className="mb-0.3 h-4 w-4" />
                           </div>
-                          <p className="text-gray-300 pb-2">{work.description}</p>
-                          <div className="flex items-center justify-between w-full">
+                          <p className="pb-2 text-[#a0a0a0]">{work.description}</p>
+
+                          <div className="pt-3 space-y-1.5">
                             <div className="text-center bg-[#232323]/30 border border-[#2e2e2e] rounded-3xl py-0.5 px-4 flex items-center justify-center w-full">
-                              <h1 className="bg-[#232323] rounded-full flex items-center">
-                                <IconCirclePlaceholderDashedFill className="animate-spin h-3 w-3 mr-1.5" />
+                              <h1 className="bg-[#232323] rounded-full flex items-center justify-center">
+                                {/* Kondisi warna icon berdasarkan status */}
+                                <IconRepostFill
+                                  className={`h-3.5 w-3.5 mr-1.5 ${work.status === 'Production' ? 'text-green-400' : 'text-yellow-400 animate-spin'}`}
+                                />
                                 <p className="m-0 lowercase">{work.status}</p>
+                              </h1>
+                            </div>
+
+                            {/* Tipe */}
+                            <div className="text-center bg-[#232323]/30 border border-[#2e2e2e] rounded-3xl py-0.5 px-4 flex items-center justify-center w-full">
+                              <h1 className="bg-[#232323] rounded-full flex items-center justify-center">
+                                <IconGlobe2Fill className="text-green-400 h-3.5 w-3.5 mr-1.5" />
+                                <p className="m-0 lowercase">{work.tipe}</p>
+                              </h1>
+                            </div>
+
+                            {/* URL or Not Available */}
+                            <div className="text-center bg-[#232323]/30 border border-[#2e2e2e] rounded-3xl py-0.5 px-4 flex items-center justify-center w-full">
+                              <h1 className="bg-[#232323] rounded-full flex items-center justify-center">
+                                <IconChainLinkFill className="text-blue-500 h-3.5 w-3.5 mr-1.5" />
+                                <p className="m-0 lowercase">
+                                  {!work.link || work.link === '-' || work.link.trim() === '' ? (
+                                    'Not yet available'
+                                  ) : (
+                                    <a
+                                      href={work.link}
+                                      target="_blank"
+                                      className="text-blue-500 hover:text-blue-400 hover:underline"
+                                    >
+                                      {work.link}
+                                    </a>
+                                  )}
+                                </p>
                               </h1>
                             </div>
                           </div>

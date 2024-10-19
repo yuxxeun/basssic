@@ -117,8 +117,7 @@ const Header = () => {
             exists for a reason.
             <br />
             <br />
-            Fancy, artsy & edgy—this is what I’m working on.{' '}
-            <br className="lg:hidden visible" />
+            Fancy, artsy & edgy—this is what I’m working on. <br className="lg:hidden visible" />
             Sneak peek my selected{' '}
             <a href="/works" className="underlines">
               Works

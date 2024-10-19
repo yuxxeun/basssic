@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 
 import { supabase } from '@/utils/supabase'
-import { IconArrowLeft, IconBook, IconChainLink, IconDateTime, IconHighlightWave, IconLoader2 } from 'justd-icons'
+import { IconBook, IconChainLink, IconDateTime, IconHighlightWave, IconLoader2, IconReply } from 'justd-icons'
 
 const Book = () => {
   const [bookmarks, setBookmarks] = useState<any[]>([])
@@ -53,8 +53,8 @@ const Book = () => {
       <div className="lg:px-3 px-1 mb-24">
         <a href="/" className="bg-[#232323]/30 backdrop-blur-3xl">
           <div className="lg:px-1.5 px-1 w-fit border border-[#2e2e2e] rounded-xl p-1.5 bg-[#232323]/30 backdrop-blur-3xl animate-fade-up animate-delay-700">
-            <div className="bg-[#232323] px-1.5 rounded-lg flex items-center gap-2">
-              <IconArrowLeft className="h-4 w-4" />
+            <div className="bg-[#232323] px-2 rounded-lg flex items-center gap-2">
+              <IconReply className="h-3.5 w-3.5" />
               Home
             </div>
           </div>
