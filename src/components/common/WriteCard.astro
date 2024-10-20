@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+interface WritingEntry {
+    title: string;
+    pubDate: Date;
+    image: string;
+    slug: string;
+}
+
+const allWriting: CollectionEntry<'writing'>[] = await getCollection('writing');
+
+// Mengubah data menjadi WritingEntry
+const writingEntries: WritingEntry[] = allWriting.map(entry => ({
+    title: entry.data.title,
+    pubDate: entry.data.pubDate,
+    image: entry.data.image,
+    slug: entry.data.slug,
+}));
+
+writingEntries.sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
+
+// Mengelompokkan entri berdasarkan tahun
+const groupedWriting = writingEntries.reduce((acc, entry) => {
+    const year = entry.pubDate.getFullYear(); // Mendapatkan tahun dari pubDate
+    if (!acc[year]) {
+        acc[year] = [];
+    }
+    acc[year].push(entry);
+    return acc;
+}, {} as Record<number, WritingEntry[]>);
+---
+
+<div class="grid grid-cols-1 gap-4">
+    {Object.keys(groupedWriting).sort((a, b) => Number(b) - Number(a)).map((year) => (
+        <div>
+            <div class="mt-6 mb-10 flex items-center justify-between">
+                <div class="mx-1 font-delight text-center bg-[#232323]/30 border border-[#2e2e2e] rounded-3xl p-1.5 flex items-center justify-center">
+                    <h1 class="bg-[#232323] px-5 rounded-full">{year}</h1>
+                </div>
+                <div class="bg-[#232323] mx-2 flex-1 h-0.5" />
+            </div>
+
+            {/* Menampilkan writing entries berdasarkan tahun */}
+            <div class="space-y-4">
+                {groupedWriting[Number(year)].map((writing) => (
+                    <a 
+                        href={`/writing/${writing.slug}`}
+                        class="border border-[#2e2e2e] rounded-xl p-1.5 bg-[#232323]/30 backdrop-blur-3xl animate-fade-up animate-delay-700 block"
+                    >
+                        <div class="bg-[#232323] border border-[#2e2e2e] rounded-lg py-3 px-5 relative overflow-hidden">
+                            <h1 class="text-md font-delight tracking-wide">
+                                {writing.title}
+                            </h1>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </div>
+    ))}
+</div>

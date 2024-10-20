@@ -1,0 +1,72 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Container from '@/components/common/Container';// Pastikan jalur ini sesuai
+import { getEntry } from 'astro:content';// Pastikan jalur ini sesuai
+import dayjs from 'dayjs';
+import { IconReply } from 'justd-icons';
+import { Image } from 'astro:assets';
+
+const { slug } = Astro.params;
+
+if (slug === undefined) {
+  throw new Error('Slug is required');
+}
+
+const entry = await getEntry('writing', slug);
+
+if (entry === undefined) {
+  return Astro.redirect('/404');
+}
+const pubDate = dayjs(entry.data.pubDate).format('ddd, DD MMM YYYY HH:mm:ss [GMT]');
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+  <Container>
+   <div class="mb-24 lg:px-3 px-1 font-delight">
+    <div class="mb-5">
+        <a href="/writing" class="bg-[#232323]/30 backdrop-blur-3xl">
+            <div class="lg:px-1.5 px-1 w-fit border border-[#2e2e2e] rounded-xl p-1.5 bg-[#232323]/30 backdrop-blur-3xl animate-fade-up animate-delay-700">
+              <div class="bg-[#232323] px-2 rounded-lg flex items-center gap-2">
+                <IconReply className="h-3 w-3" />
+                Writing
+              </div>
+            </div>
+          </a>
+       </div>
+        <article>
+          <div class="px-0.5 space-y-1">
+            <p class="text-md font-delight tracking-wide">{dayjs(pubDate).format('dddd, DD MMMM YYYY')}</p>
+            <h1 class="text-3xl font-delight tracking-wide text-[#bbbbbb] font-bold mb-2">
+              {entry.data.title}
+          </h1>
+          </div>
+          
+          
+          <div class="my-5 border w-fit border-[#2e2e2e] rounded-xl p-1.5 bg-[#232323]/30">
+              <Image height={450} width={800} densities={[1.5, 2]}
+              class="rounded-lg grayscale-0 h-auto max-w-full object-cover" src='https://yuxxeun.vercel.app/_astro/koding.ad-Urc1M_Z1bLdwR.webp' alt="description">
+          </div>
+          
+          <div class="prose-p:text-lg font-delight letter tracking-wide prose prose-p:text-delight
+              prose-p:text-[#9b9b9b]
+              dark:prose-invert
+              prose-p:leading-6 
+              prose-h1:text-[#bbbbbb] 
+              prose-h2:text-[#bbbbbb] 
+              prose-h3:text-[#bbbbbb] 
+              prose-h1:font-bold
+              prose-h1:tracking-wide
+              prose-h2:tracking-wide
+              prose-h3:tracking-wide
+              prose-a:text-blue-500 prose-img:rounded-xl
+              prose-p:mb-2 prose-h1:-mb-1">
+              <Content />
+          </div>
+          
+
+        </article>
+   </div>
+  </Container>
+</Layout>
+

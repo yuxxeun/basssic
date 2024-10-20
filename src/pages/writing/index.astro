@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Container from '@/components/common/Container';
+import WriteCard from '@/components/common/WriteCard.astro';
+import { IconReply } from 'justd-icons';
+---
+<Layout title='Writing'>
+    <Container>
+        <div class="lg:px-3 px-1 mb-24 font-delight">
+            <a href="/" class="bg-[#232323]/30 backdrop-blur-3xl">
+                <div class="lg:px-1.5 px-1 w-fit border border-[#2e2e2e] rounded-xl p-1.5 bg-[#232323]/30 backdrop-blur-3xl animate-fade-up animate-delay-700">
+                  <div class="bg-[#232323] px-2 rounded-lg flex items-center gap-2">
+                    <IconReply className="h-3.5 w-3.5" />
+                    Home
+                  </div>
+                </div>
+              </a>
+            <header class="px-1 my-5 animate-fade-up animate-delay-100">
+                <h1 class="text-xl font-delight tracking-wider font-semibold">Writing</h1>
+                <p class="mt-2 animate-fade-up animate-delay-300">
+                  Fancy & artsy software is created by creativity and craftsmanship. <br class="hidden lg:visible" />
+                  It's offers an exquisite and inspiring experience.
+                </p>
+              </header>
+            <WriteCard/>
+        </div>
+    </Container>
+</Layout>
