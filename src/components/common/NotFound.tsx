@@ -16,15 +16,12 @@ const NotFound = () => {
                 </a>
               </div>
               <div>
-                <h1 className="text-xlfont-delight tracking-wider font-semibold">404—Not found</h1>
+                <h1 className="text-xl font-delight tracking-wider font-semibold">404—Not found</h1>
               </div>
             </div>
-            <p className="mt-5 animate-fade-down">
+            <p className="mt-5 animate-fade-down leading-normal">
               Another thing not found anymore is HTML comments. Websites are smaller, at what cost?
-              <br />A <span className="font-newsreaderItalic tracking-wide font-semibold">discarded thought</span>, an{' '}
-              <span className="font-newsreaderItalic tracking-wide font-semibold">unfinished design</span>, an{' '}
-              <span className="font-newsreaderItalic tracking-wide font-semibold">alternate phrasing </span>, a{' '}
-              <span className="font-newsreaderItalic tracking-wide font-semibold">note to self</span>.
+              <br />A discarded thought, an unfinished design, an alternate phrasing, a note to self.
             </p>
           </div>
         </div>

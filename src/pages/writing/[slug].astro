@@ -5,7 +5,6 @@ import { getEntry } from 'astro:content';// Pastikan jalur ini sesuai
 import dayjs from 'dayjs';
 import { IconReply } from 'justd-icons';
 import { Image } from 'astro:assets';
-
 const { slug } = Astro.params;
 
 if (slug === undefined) {
@@ -42,12 +41,10 @@ const { Content } = await entry.render();
           </h1>
           </div>
           
-          
           <div class="my-5 border w-fit border-[#2e2e2e] rounded-xl p-1.5 bg-[#232323]/30">
               <Image height={450} width={800} densities={[1.5, 2]}
-              class="rounded-lg grayscale-0 h-auto max-w-full object-cover" src='https://yuxxeun.vercel.app/_astro/koding.ad-Urc1M_Z1bLdwR.webp' alt="description">
+              class="rounded-lg grayscale-0 h-auto max-w-full object-cover" src={entry.data.image} alt="description">
           </div>
-          
           <div class="prose-p:text-lg font-delight letter tracking-wide prose prose-p:text-delight
               prose-p:text-[#9b9b9b]
               dark:prose-invert
@@ -63,10 +60,8 @@ const { Content } = await entry.render();
               prose-p:mb-2 prose-h1:-mb-1">
               <Content />
           </div>
-          
-
         </article>
-   </div>
+    </div>
   </Container>
 </Layout>
 
