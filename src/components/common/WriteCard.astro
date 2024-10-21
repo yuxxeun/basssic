@@ -11,7 +11,6 @@ interface WritingEntry {
 
 const allWriting: CollectionEntry<'writing'>[] = await getCollection('writing');
 
-// Mengubah data menjadi WritingEntry
 const writingEntries: WritingEntry[] = allWriting.map(entry => ({
     title: entry.data.title,
     pubDate: entry.data.pubDate,
@@ -21,9 +20,8 @@ const writingEntries: WritingEntry[] = allWriting.map(entry => ({
 
 writingEntries.sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
 
-// Mengelompokkan entri berdasarkan tahun
 const groupedWriting = writingEntries.reduce((acc, entry) => {
-    const year = entry.pubDate.getFullYear(); // Mendapatkan tahun dari pubDate
+    const year = entry.pubDate.getFullYear();
     if (!acc[year]) {
         acc[year] = [];
     }
@@ -41,8 +39,7 @@ const groupedWriting = writingEntries.reduce((acc, entry) => {
                 </div>
                 <div class="bg-[#232323] mx-2 flex-1 h-0.5" />
             </div>
-
-            {/* Menampilkan writing entries berdasarkan tahun */}
+            
             <div class="space-y-4">
                 {groupedWriting[Number(year)].map((writing) => (
                     <a 

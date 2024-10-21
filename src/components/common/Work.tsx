@@ -64,7 +64,7 @@ const Work = () => {
         </a>
         <header className="px-1 my-5 animate-fade-up animate-delay-100">
           <h1 className="text-xl font-delight tracking-wider font-semibold">Works</h1>
-          <p className="mt-2 animate-fade-up animate-delay-300">
+          <p className="mt-2 font-delight animate-fade-up animate-delay-300">
             Fancy & artsy software is created by creativity and craftsmanship. <br className="hidden lg:visible" />
             It's offers an exquisite and inspiring experience.
           </p>
@@ -101,32 +101,29 @@ const Work = () => {
                             <h1 className="ftext-md font-delight tracking-wider font-semibold">{work.title}</h1>
                             <IconVerifiedFill className="mb-0.3 h-4 w-4" />
                           </div>
-                          <p className="pb-2 text-[#a0a0a0]">{work.description}</p>
+                          <p className="pb-2 text-[#a0a0a0] font-delight">{work.description}</p>
 
                           <div className="pt-3 space-y-1.5">
                             <div className="text-center bg-[#232323]/30 border border-[#2e2e2e] rounded-3xl py-0.5 px-4 flex items-center justify-center w-full">
                               <h1 className="bg-[#232323] rounded-full flex items-center justify-center">
-                                {/* Kondisi warna icon berdasarkan status */}
                                 <IconRepostFill
                                   className={`h-3.5 w-3.5 mr-1.5 ${work.status === 'Production' ? 'text-green-400' : 'text-yellow-400 animate-spin'}`}
                                 />
-                                <p className="m-0 lowercase">{work.status}</p>
+                                <p className="m-0 lowercase font-delight">{work.status}</p>
                               </h1>
                             </div>
 
-                            {/* Tipe */}
                             <div className="text-center bg-[#232323]/30 border border-[#2e2e2e] rounded-3xl py-0.5 px-4 flex items-center justify-center w-full">
                               <h1 className="bg-[#232323] rounded-full flex items-center justify-center">
                                 <IconGlobe2Fill className="text-green-400 h-3.5 w-3.5 mr-1.5" />
-                                <p className="m-0 lowercase">{work.tipe}</p>
+                                <p className="m-0 lowercase font-delight">{work.tipe}</p>
                               </h1>
                             </div>
 
-                            {/* URL or Not Available */}
                             <div className="text-center bg-[#232323]/30 border border-[#2e2e2e] rounded-3xl py-0.5 px-4 flex items-center justify-center w-full">
                               <h1 className="bg-[#232323] rounded-full flex items-center justify-center">
                                 <IconChainLinkFill className="text-blue-500 h-3.5 w-3.5 mr-1.5" />
-                                <p className="m-0 lowercase">
+                                <p className="m-0 lowercase font-delight">
                                   {!work.link || work.link === '-' || work.link.trim() === '' ? (
                                     'Not yet available'
                                   ) : (

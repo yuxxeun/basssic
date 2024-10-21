@@ -3,7 +3,15 @@
 import { useEffect, useState } from 'react'
 
 import { supabase } from '@/utils/supabase'
-import { IconBook, IconChainLink, IconDateTime, IconHighlightWave, IconLoader2, IconReply } from 'justd-icons'
+import {
+  IconBook,
+  IconBookFill,
+  IconChainLink,
+  IconDateTime,
+  IconHighlightWave,
+  IconLoader2,
+  IconReply
+} from 'justd-icons'
 
 const Book = () => {
   const [bookmarks, setBookmarks] = useState<any[]>([])
@@ -50,7 +58,7 @@ const Book = () => {
 
   return (
     <>
-      <div className="lg:px-3 px-1 mb-24">
+      <div className="lg:px-3 px-1 mb-24 font-delight">
         <a href="/" className="bg-[#232323]/30 backdrop-blur-3xl">
           <div className="lg:px-1.5 px-1 w-fit border border-[#2e2e2e] rounded-xl p-1.5 bg-[#232323]/30 backdrop-blur-3xl animate-fade-up animate-delay-700">
             <div className="bg-[#232323] px-2 rounded-lg flex items-center gap-2">
@@ -84,15 +92,15 @@ const Book = () => {
             <div key={year}>
               <div className="mt-6 mb-10 flex items-center justify-between">
                 <div className="mx-1 text-center bg-[#232323]/30 border border-[#2e2e2e] rounded-3xl p-1.5 flex items-center justify-center">
-                  <h1 className="bg-[#232323] px-5 rounded-full">{year}</h1>
+                  <h1 className="bg-[#232323] font-delight flex items-center gap-2 px-5 rounded-full">
+                    <IconBookFill className="h-3.5 w-3.5" /> {year}
+                  </h1>
                 </div>
                 <div className="bg-[#232323] mx-2 flex-1 h-0.5" />
               </div>
 
-              {/* Mengurutkan bookmark di dalam tahun yang sama */}
               <div className="space-y-4">
                 {' '}
-                {/* Tambahkan space-y di sini */}
                 {groupedBookmarks[year]
                   .sort((a, b) => new Date(b.time).getTime() - new Date(a.time).getTime())
                   .map((bookmark) => (
@@ -120,7 +128,7 @@ const Book = () => {
                             <div className="p-1.5 border border-[#2e2e2e] rounded-lg flex-shrink-0">
                               <IconDateTime className="h-4 w-4" />
                             </div>
-                            <span className="text-gray-300">{bookmark.time}</span>
+                            <span className="text-gray-300 font-delight">{bookmark.time}</span>
                           </div>
                           <div className="flex items-center gap-2.5">
                             <div className="p-1.5 border border-[#2e2e2e] rounded-lg flex-shrink-0">

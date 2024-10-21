@@ -4,10 +4,10 @@ import { supabase } from '@/utils/supabase'
 import confetti from 'canvas-confetti'
 import dayjs from 'dayjs'
 import {
-  IconBellAlarm,
   IconCircleCheckFill,
   IconCircleXFill,
   IconCursorClick,
+  IconCursorClickFill,
   IconDateTime,
   IconLoader2,
   IconReply
@@ -146,7 +146,7 @@ const Secreto = () => {
       <div className="lg:px-3 px-1 mb-24">
         <a href="/" className="bg-[#232323]/30 backdrop-blur-3xl">
           <div className="lg:px-1.5 px-1 w-fit border border-[#2e2e2e] rounded-xl p-1.5 bg-[#232323]/30 backdrop-blur-3xl animate-fade-up animate-delay-700">
-            <div className="bg-[#232323] px-2 rounded-lg flex items-center gap-2">
+            <div className="bg-[#232323] font-delight px-2 rounded-lg flex items-center gap-2">
               <IconReply className="h-3.5 w-3.5" />
               Home
             </div>
@@ -154,7 +154,9 @@ const Secreto = () => {
         </a>
         <header className="px-1 my-5 animate-fade-up animate-delay-100">
           <h1 className="text-xl font-delight tracking-wider font-semibold">Secreto</h1>
-          <p className="mt-2 animate-fade-up animate-delay-300">A medium to draw your random unspoken thoughts.</p>
+          <p className="mt-2 animate-fade-up font-delight animate-delay-300">
+            A medium to draw your random unspoken thoughts.
+          </p>
         </header>
 
         {loading && (
@@ -172,7 +174,7 @@ const Secreto = () => {
                 value={comment}
                 onChange={handleCommentChange}
                 placeholder="Wait, I'm preparing for this goddamn section 😤"
-                className="w-full p-2 h-20 border-2 border-[#2e2e2e] rounded-lg bg-[#1a1a1a] focus:bg-[#2e2e2e] focus:outline-none transition-colors"
+                className="w-full font-delight p-2 h-20 border-2 border-[#2e2e2e] rounded-lg bg-[#1a1a1a] focus:bg-[#2e2e2e] focus:outline-none transition-colors"
                 rows={4}
               />
               <button
@@ -195,8 +197,8 @@ const Secreto = () => {
             <div key={year}>
               <div className="mt-6 mb-10 flex items-center justify-between">
                 <div className="mx-1 text-center bg-[#232323]/30 border border-[#2e2e2e] rounded-3xl p-1.5 flex items-center justify-center">
-                  <h1 className="bg-[#232323] flex items-center gap-2 px-5 rounded-full">
-                    <IconBellAlarm className="size-4" /> {year}
+                  <h1 className="bg-[#232323] font-delight flex items-center gap-2 px-5 rounded-full">
+                    <IconCursorClickFill className="h-3.5 w-3.5" /> {year}
                   </h1>
                 </div>
                 <div className="bg-[#232323] mx-2 flex-1 h-0.5" />
